@@ -1,3 +1,6 @@
+#t2 file code change to th master brnach to form new branch.
+
+
 echo "enter value"
 read n
 fact=1
