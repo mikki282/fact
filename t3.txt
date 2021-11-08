@@ -1,4 +1,4 @@
-Looping Concept
+Looping Concept/ conditional statement
 
 #while loop
 
