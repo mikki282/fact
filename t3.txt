@@ -1,0 +1,189 @@
+Looping Concept
+
+#while loop
+
+echo "enter number"
+
+read n
+
+fact=1
+
+while [ $n -gt 1 ]
+
+do
+
+fact=`expr $n \* $fact`
+
+n=$(($n-1))
+
+done
+
+echo "Factorial is: $fact"
+
+
+
+#for loop
+
+#this will print number from 1 to 50 in interval of 5.
+
+for var1 in {1..50..5}
+
+do
+
+echo " $var1 "
+
+done
+
+
+
+#for loop using list of value
+
+i=1
+
+for day in Mon Tue Wed Thu Fri
+
+do 
+
+echo " weekdays $((i++)) :" $day
+
+done
+
+
+
+#for loop using C like syntax
+
+echo "enter value"
+
+read n
+
+sum=0
+
+for (( i=0; i<=n; ++i ))
+
+do
+
+sum=`expr $sum + $i`
+
+done
+
+echo "Sum is :"$sum
+
+
+
+#for loop with command
+
+echo "all file list"
+
+for val in $(ls)
+
+do
+
+echo " $val "
+
+done
+
+
+
+#for loop for file
+
+echo "content of file"
+
+for val2 in `cat main.sh`
+
+do
+
+echo"$val2"
+
+done
+
+
+
+#Conditional statement
+
+#if statement
+
+echo "enter first value "
+
+read a
+
+echo "enter second value"
+
+read b
+
+if [ $a -gt $b ]
+
+then
+
+   echo "$a is greater than $b"
+
+fi
+
+
+
+
+
+#elif and else condition
+
+echo "enter first value "
+
+read a
+
+echo "enter second value"
+
+read b
+
+if [ $a -gt $b ]
+
+then
+
+   echo "$a is greater than $b"
+
+elif [ $a -lt $b ]
+
+then
+
+    echo "$a is less than $b"
+
+else
+
+   echo "result not found"
+
+fi
+
+
+
+#Case statement
+
+
+
+vehicle=$1
+
+echo "enter name"
+
+read vehicle
+
+
+
+case $vehicle in
+
+  "car")
+
+     echo "rent of $vehicle is 100 dollar";;
+
+  "van")
+
+     echo "rent of $vehicle is 70 dollar";;
+
+"truck")
+
+     echo "rent of $vehicle is 80 dollar";;
+
+"bike")
+
+     echo "rent of $vehicle is 60 dollar";;
+
+*)
+
+  echo "item not listed";;
+
+esac
